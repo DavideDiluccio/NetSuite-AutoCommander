@@ -6,3 +6,40 @@
     ]
 }
 
+
+
+<command>
+	<type>
+		Publish Item
+	</type>
+	<args>
+		<id>
+			1
+		</id>
+		<published>
+			true
+		</published>
+		<name>
+			Item1
+		</name>
+	</args>
+</command>
+
+{
+  "command": {
+				"type": "
+					Publish Item
+				",
+				"args": {
+						  "id": "
+								1
+							",
+						  "published": "
+								true
+							",
+						  "name": "
+								Item1
+							"
+				}
+  }
+}

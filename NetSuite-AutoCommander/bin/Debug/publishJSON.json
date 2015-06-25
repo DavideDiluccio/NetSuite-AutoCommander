@@ -1,0 +1,20 @@
+{
+    "cmd": {
+        "command": [{
+            "type": "publish",
+            "args": {
+                "id": "1",
+                "publish": "true",
+                "nome": "cipolle"
+            }
+        },
+		{
+		 "type": "publish",
+            "args": {
+                "id": "1",
+                "publish": "true",
+                "nome": "cipolle"
+            }
+		}]
+    }
+}

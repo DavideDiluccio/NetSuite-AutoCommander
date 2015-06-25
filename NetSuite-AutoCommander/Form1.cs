@@ -82,6 +82,11 @@ namespace NetSuite_AutoCommander
                 cmbAccount.Items.Add(listAccount[i]);
             }
 
+
+            //Dati di test
+            txtEmail.Text = "davide.diluccio@vallauri.edu";
+            txtPassword.Text = "A12_ch3yuSD80";
+            cmbAccount.SelectedIndex = 0;
         }
 
         private void btnConnect_Click(object sender, EventArgs e)
@@ -189,6 +194,8 @@ namespace NetSuite_AutoCommander
                 string commandText = (string)result["command"];
 
                 c = new DefaultCommand(commandText);
+
+                MessageBox.Show(commandText);
                 //Inserimento Comando all'interno della Lista Comandi
                 listCommand.Add(c);
 
