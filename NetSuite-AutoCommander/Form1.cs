@@ -179,13 +179,11 @@ namespace NetSuite_AutoCommander
 
             StreamReader r = new StreamReader(filename);
             string sampleJson = r.ReadToEnd();
-            // Parse JSON into dynamic object, convenient!
+            //Trasformo il JSON in un oggetto
             JObject results = JObject.Parse(sampleJson);
-
-            // Process each employee
+            //Per ogni comando trovato nel file mi salvo il nome
             foreach (var result in results["cmd"])
             {
-                // this can be a string or null
                 string commandText = (string)result["command"];
 
                 c = new DefaultCommand(commandText);
