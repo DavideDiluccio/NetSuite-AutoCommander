@@ -19,10 +19,14 @@ namespace NetSuite_AutoCommander
 {  
     public partial class FormMain : Form
     {
+        //Lista codici Account NetSuite
         List<String> listAccount;
-        NetSuiteService service;
-        ILogger logger;
+        //Lista Comandi letti da JSON
         List<ICommand> listCommand;
+        //Servizio collegamento NetSuite
+        NetSuiteService service;
+        //Oggetto logging -> RichTextbox
+        ILogger logger;
 
         //Variabile stato log in
         bool logged;
@@ -59,6 +63,7 @@ namespace NetSuite_AutoCommander
             DisableControls(this);            
 
             logged = false;
+
             //Nascondo lbl  
             lblError.Text = "";
             lblStatusConnection.Text = "Non Connesso";
@@ -69,10 +74,10 @@ namespace NetSuite_AutoCommander
             //init logger proxy
             logger = new TextBoxLoggerProxy(rtbLogCommand);
 
-            //Lettura Account
+            //Lettura File con Codici Account
             readAccountFile();
 
-            //Caricamento Combobox
+            //Caricamento Combobox con Codici Account NetSuite
             for (int i = 0; i < listAccount.Count; i++)
             {
                 cmbAccount.Items.Add(listAccount[i]);
@@ -89,15 +94,16 @@ namespace NetSuite_AutoCommander
                 lblError.Text = "";
                 lblStatusConnection.Text = "Log-in in corso...";
 
+                //Istanza Servizio NetSuite
                 service = new NetSuiteService();
 
+                //Lettura Credenziali
                 string account = cmbAccount.SelectedItem.ToString();
                 string email = txtEmail.Text;
                 string password = txtPassword.Text;
 
                 //Ricerca Url WebService
                 DataCenterAwareNetSuiteService DataCenter_Url = new DataCenterAwareNetSuiteService(account);
-
                 service.Url = DataCenter_Url.Url;
                 service.AllowAutoRedirect = true;
                 service.CookieContainer = new System.Net.CookieContainer();
@@ -128,7 +134,6 @@ namespace NetSuite_AutoCommander
                 {
                     panelLogin.BackColor = Color.Red;
                     lblError.Text = "Errore Log In!";
-
                     lblStatusConnection.Text = "Connessione non riuscita! " + ex.Message;
                 }
             }
@@ -137,14 +142,13 @@ namespace NetSuite_AutoCommander
                 //Logout NetSuite
                 service.logout();
                 //Disabilito comandi Programma se non Connesso
-                DisableControls(this);
-
-                lblStatusConnection.Text = "Non Connesso";
+                DisableControls(this);                
 
                 logged = false;
                 panelLogin.BackColor = Color.Transparent;
 
                 btnConnect.Text = "Connect";
+                lblStatusConnection.Text = "Non Connesso";
                 txtEmail.Text = "";
                 txtPassword.Text = "";
                 cmbAccount.SelectedItem = null;
@@ -153,7 +157,8 @@ namespace NetSuite_AutoCommander
         }
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
-        {            
+        {      
+            //Se si è loggati si slogga
             if (logged)
             {
                 lblStatusConnection.Text = "Log out in corso....";
@@ -163,6 +168,10 @@ namespace NetSuite_AutoCommander
             
         }
 
+        /// <summary>
+        /// Lettura File JSON con Comandi Eseguibili
+        /// </summary>
+        /// <param name="filename">Filename del file da leggere</param>
         private void leggiJSON(string filename)
         {
             listCommand = new List<ICommand>();
@@ -180,6 +189,7 @@ namespace NetSuite_AutoCommander
                 string commandText = (string)result["command"];
 
                 c = new DefaultCommand(commandText);
+                //Inserimento Comando all'interno della Lista Comandi
                 listCommand.Add(c);
             }
         }
@@ -232,6 +242,7 @@ namespace NetSuite_AutoCommander
             //Abilito btn per eseguire i comandi
             btnStart.Enabled = true;
 
+            //Lettura file JSON con Comandi
             leggiJSON(openFileDialog.FileName);
         }
 
@@ -239,8 +250,7 @@ namespace NetSuite_AutoCommander
         {
             for (int i = 0; i <  listCommand.Count; i++)
             {
-                //rtbLogCommand.Text += "" + listCommand[i].executeCommand() + "\n";
-                //logger.Log(listCommand[i].executeCommand());
+                //Scrittura Comando nel RichTextBox
                 listCommand[i].Execute(logger);
             }
         }
