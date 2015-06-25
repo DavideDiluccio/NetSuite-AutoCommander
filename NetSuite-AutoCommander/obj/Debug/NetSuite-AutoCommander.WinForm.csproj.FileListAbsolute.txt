@@ -15,3 +15,19 @@ C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-AutoCommander\obj\Debug\
 C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-AutoCommander\obj\Debug\NetSuite-AutoCommander.pdb
 C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-AutoCommander\bin\Debug\NetSuite-DefaultImplementations.dll
 C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-AutoCommander\bin\Debug\NetSuite-DefaultImplementations.pdb
+C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-AutoCommander\bin\Debug\NetSuite-AutoCommander.exe.config
+C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-AutoCommander\obj\Debug\NetSuite-AutoCommander.exe
+C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-AutoCommander\obj\Debug\NetSuite-AutoCommander.pdb
+C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-AutoCommander\bin\Debug\codAccount.txt
+C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-AutoCommander\bin\Debug\NetSuite-AutoCommander.exe
+C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-AutoCommander\bin\Debug\NetSuite-AutoCommander.pdb
+C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-AutoCommander\bin\Debug\NetSuite-Commands.Contracts.dll
+C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-AutoCommander\bin\Debug\NetSuite-DefaultImplementations.dll
+C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-AutoCommander\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-AutoCommander\bin\Debug\NetSuite-Commands.Contracts.pdb
+C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-AutoCommander\bin\Debug\NetSuite-DefaultImplementations.pdb
+C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-AutoCommander\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-AutoCommander\obj\Debug\NetSuite-AutoCommander.WinForm.csprojResolveAssemblyReference.cache
+C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-AutoCommander\obj\Debug\NetSuite_AutoCommander.FormMain.resources
+C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-AutoCommander\obj\Debug\NetSuite_AutoCommander.Properties.Resources.resources
+C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-AutoCommander\obj\Debug\NetSuite-AutoCommander.WinForm.csproj.GenerateResource.Cache

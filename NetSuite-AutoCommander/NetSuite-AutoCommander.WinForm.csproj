@@ -52,7 +52,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Command.cs" />
     <Compile Include="DataCenterAwareNetSuiteService.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

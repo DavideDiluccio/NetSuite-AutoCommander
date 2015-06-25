@@ -9,6 +9,8 @@ namespace NetSuite_DefaultImplementations
 {
     public class DefaultLogger:ILogger
     {
+        //NB. Fare il collegamento da FILE.
+
 
         public void Log(string message)
         {

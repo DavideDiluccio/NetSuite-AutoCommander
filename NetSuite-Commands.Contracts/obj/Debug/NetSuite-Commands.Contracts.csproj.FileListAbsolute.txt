@@ -3,3 +3,8 @@ C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-Commands.Contracts\bin\D
 C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-Commands.Contracts\bin\Debug\NetSuite-Commands.Contracts.pdb
 C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-Commands.Contracts\obj\Debug\NetSuite-Commands.Contracts.dll
 C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-Commands.Contracts\obj\Debug\NetSuite-Commands.Contracts.pdb
+C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-Commands.Contracts\bin\Debug\NetSuite-Commands.Contracts.dll
+C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-Commands.Contracts\bin\Debug\NetSuite-Commands.Contracts.pdb
+C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-Commands.Contracts\obj\Debug\NetSuite-Commands.Contracts.csprojResolveAssemblyReference.cache
+C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-Commands.Contracts\obj\Debug\NetSuite-Commands.Contracts.dll
+C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-Commands.Contracts\obj\Debug\NetSuite-Commands.Contracts.pdb
