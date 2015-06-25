@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DFD0A0B3-80D4-4508-AF7F-32F71228B9E6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetSuite_AutoCommander</RootNamespace>
+    <AssemblyName>NetSuite-AutoCommander</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Web References.com.netsuite.webservices.Reference.cs">
+      <HintPath>..\..\NetSuite\NSClient CRM 2015.1\obj\Debug\TempPE\Web References.com.netsuite.webservices.Reference.cs.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Command.cs" />
+    <Compile Include="DataCenterAwareNetSuiteService.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TextBoxLoggerProxy.cs" />
+    <Compile Include="Web References\com.netsuite.webservices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Web References\com.netsuite.webservices\accounting.xsd" />
+    <None Include="Web References\com.netsuite.webservices\accountingTypes.xsd" />
+    <None Include="Web References\com.netsuite.webservices\AsyncResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.webservices\AsyncStatusResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.webservices\bank.xsd" />
+    <None Include="Web References\com.netsuite.webservices\bankTypes.xsd" />
+    <None Include="Web References\com.netsuite.webservices\common.xsd" />
+    <None Include="Web References\com.netsuite.webservices\commonTypes.xsd" />
+    <None Include="Web References\com.netsuite.webservices\communication.xsd" />
+    <None Include="Web References\com.netsuite.webservices\communicationTypes.xsd" />
+    <None Include="Web References\com.netsuite.webservices\core.xsd" />
+    <None Include="Web References\com.netsuite.webservices\coreTypes.xsd" />
+    <None Include="Web References\com.netsuite.webservices\customers.xsd" />
+    <None Include="Web References\com.netsuite.webservices\customerTypes.xsd" />
+    <None Include="Web References\com.netsuite.webservices\customization.xsd" />
+    <None Include="Web References\com.netsuite.webservices\customizationTypes.xsd" />
+    <None Include="Web References\com.netsuite.webservices\demandPlanning.xsd" />
+    <None Include="Web References\com.netsuite.webservices\demandPlanningTypes.xsd" />
+    <None Include="Web References\com.netsuite.webservices\employees.xsd" />
+    <None Include="Web References\com.netsuite.webservices\employees0.xsd" />
+    <None Include="Web References\com.netsuite.webservices\employeeTypes.xsd" />
+    <None Include="Web References\com.netsuite.webservices\employeeTypes0.xsd" />
+    <None Include="Web References\com.netsuite.webservices\faults.xsd" />
+    <None Include="Web References\com.netsuite.webservices\faultTypes.xsd" />
+    <None Include="Web References\com.netsuite.webservices\fileCabinet.xsd" />
+    <None Include="Web References\com.netsuite.webservices\fileCabinetTypes.xsd" />
+    <None Include="Web References\com.netsuite.webservices\financial.xsd" />
+    <None Include="Web References\com.netsuite.webservices\financialTypes.xsd" />
+    <None Include="Web References\com.netsuite.webservices\general.xsd" />
+    <None Include="Web References\com.netsuite.webservices\GetAllResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.webservices\GetBudgetExchangeRateResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.webservices\GetConsolidatedExchangeRateResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.webservices\GetCurrencyRateResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.webservices\GetCustomizationIdResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.webservices\GetDataCenterUrlsResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.webservices\GetDeletedResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.webservices\GetItemAvailabilityResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.webservices\GetPostingTransactionSummaryResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.webservices\GetSavedSearchResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.webservices\GetSelectValueResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.webservices\GetServerTimeResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.webservices\inventory.xsd" />
+    <None Include="Web References\com.netsuite.webservices\inventoryTypes.xsd" />
+    <None Include="Web References\com.netsuite.webservices\marketing.xsd" />
+    <None Include="Web References\com.netsuite.webservices\marketingTypes.xsd" />
+    <None Include="Web References\com.netsuite.webservices\messages.xsd" />
+    <None Include="Web References\com.netsuite.webservices\netsuite.wsdl" />
+    <None Include="Web References\com.netsuite.webservices\purchases.xsd" />
+    <None Include="Web References\com.netsuite.webservices\purchaseTypes.xsd" />
+    <None Include="Web References\com.netsuite.webservices\ReadResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.webservices\ReadResponseList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.webservices\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\com.netsuite.webservices\relationships.xsd" />
+    <None Include="Web References\com.netsuite.webservices\relationshipTypes.xsd" />
+    <None Include="Web References\com.netsuite.webservices\sales.xsd" />
+    <None Include="Web References\com.netsuite.webservices\saleTypes.xsd" />
+    <None Include="Web References\com.netsuite.webservices\scheduling.xsd" />
+    <None Include="Web References\com.netsuite.webservices\schedulingTypes.xsd" />
+    <None Include="Web References\com.netsuite.webservices\SearchResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.webservices\SessionResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.webservices\supplyChain.xsd" />
+    <None Include="Web References\com.netsuite.webservices\supplyChainTypes.xsd" />
+    <None Include="Web References\com.netsuite.webservices\support.xsd" />
+    <None Include="Web References\com.netsuite.webservices\supportTypes.xsd" />
+    <None Include="Web References\com.netsuite.webservices\website.xsd" />
+    <None Include="Web References\com.netsuite.webservices\websiteTypes.xsd" />
+    <None Include="Web References\com.netsuite.webservices\WriteResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.webservices\WriteResponseList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="codAccount.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://webservices.netsuite.com/wsdl/v2015_1_0/netsuite.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.netsuite.webservices\</RelPath>
+      <UpdateFromURL>https://webservices.netsuite.com/wsdl/v2015_1_0/netsuite.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NetSuite_AutoCommander_com_netsuite_webservices_NetSuiteService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NetSuite-Commands.Contracts\NetSuite-Commands.Contracts.csproj">
+      <Project>{35207ffd-2ffc-4919-86ae-8cfa29ccf864}</Project>
+      <Name>NetSuite-Commands.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NetSuite-DefaultImplementations\NetSuite-DefaultImplementations.csproj">
+      <Project>{34fbebfb-28d6-4dca-8a4e-96d85c577f00}</Project>
+      <Name>NetSuite-DefaultImplementations</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

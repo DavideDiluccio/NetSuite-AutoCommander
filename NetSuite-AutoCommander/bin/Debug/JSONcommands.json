@@ -1,0 +1,8 @@
+{
+  "cmd": [
+	{"command": "cmd1"}, 
+	{ "command": "cmd2"}, 
+	{ "command": "cmd3"}
+    ]
+}
+

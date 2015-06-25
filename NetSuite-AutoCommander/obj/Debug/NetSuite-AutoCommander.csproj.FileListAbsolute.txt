@@ -1,0 +1,13 @@
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-AutoCommander\bin\Debug\NetSuite-AutoCommander.exe.config
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-AutoCommander\bin\Debug\NetSuite-AutoCommander.exe
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-AutoCommander\bin\Debug\NetSuite-AutoCommander.pdb
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-AutoCommander\obj\Debug\NetSuite-AutoCommander.csprojResolveAssemblyReference.cache
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-AutoCommander\obj\Debug\NetSuite_AutoCommander.FormMain.resources
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-AutoCommander\obj\Debug\NetSuite_AutoCommander.Properties.Resources.resources
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-AutoCommander\obj\Debug\NetSuite-AutoCommander.csproj.GenerateResource.Cache
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-AutoCommander\obj\Debug\NetSuite-AutoCommander.exe
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-AutoCommander\obj\Debug\NetSuite-AutoCommander.pdb
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-AutoCommander\bin\Debug\codAccount.txt
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-AutoCommander\bin\Debug\Web References.com.netsuite.webservices.Reference.cs.dll
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-AutoCommander\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-AutoCommander\bin\Debug\Newtonsoft.Json.xml

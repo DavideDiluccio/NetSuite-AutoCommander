@@ -1,0 +1,7 @@
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-DefaultImplementations\bin\Debug\NetSuite-DefaultImplementations.dll
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-DefaultImplementations\bin\Debug\NetSuite-DefaultImplementations.pdb
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-DefaultImplementations\bin\Debug\NetSuite-Commands.Contracts.dll
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-DefaultImplementations\bin\Debug\NetSuite-Commands.Contracts.pdb
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-DefaultImplementations\obj\Debug\NetSuite-DefaultImplementations.csprojResolveAssemblyReference.cache
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-DefaultImplementations\obj\Debug\NetSuite-DefaultImplementations.dll
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-DefaultImplementations\obj\Debug\NetSuite-DefaultImplementations.pdb
