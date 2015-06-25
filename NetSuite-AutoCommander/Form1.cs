@@ -65,7 +65,6 @@ namespace NetSuite_AutoCommander
             logged = false;
 
             //Nascondo lbl  
-            lblError.Text = "";
             lblStatusConnection.Text = "Non Connesso";
 
             //Istanza lista Account
@@ -90,52 +89,55 @@ namespace NetSuite_AutoCommander
             //Se non si è loggati si connette
             if (!logged)
             {
-                //Messaggio Connessione
-                lblError.Text = "";
-                lblStatusConnection.Text = "Log-in in corso...";
-
-                //Istanza Servizio NetSuite
-                service = new NetSuiteService();
-
-                //Lettura Credenziali
-                string account = cmbAccount.SelectedItem.ToString();
-                string email = txtEmail.Text;
-                string password = txtPassword.Text;
-
-                //Ricerca Url WebService
-                DataCenterAwareNetSuiteService DataCenter_Url = new DataCenterAwareNetSuiteService(account);
-                service.Url = DataCenter_Url.Url;
-                service.AllowAutoRedirect = true;
-                service.CookieContainer = new System.Net.CookieContainer();
-
-                //Connessione
-                Passport passport = new Passport();
-                passport.account = account;
-                passport.email = email;
-                passport.password = password;
-                try
+                if (cmbAccount.SelectedItem != null)
                 {
-                    Status status = service.login(passport).status;
+                    //Messaggio Connessione
+                    lblStatusConnection.Text = "Login in corso...";
 
-                    //Connessione Riuscita Con Successo
-                    panelLogin.BackColor = Color.LightGreen;
+                    //Istanza Servizio NetSuite
+                    service = new NetSuiteService();
 
-                    logged = true;
+                    //Lettura Credenziali
+                    string account = cmbAccount.SelectedItem.ToString();
+                    string email = txtEmail.Text;
+                    string password = txtPassword.Text;
 
-                    lblStatusConnection.Text = "Connesso";
+                    //Ricerca Url WebService
+                    DataCenterAwareNetSuiteService DataCenter_Url = new DataCenterAwareNetSuiteService(account);
+                    service.Url = DataCenter_Url.Url;
+                    service.AllowAutoRedirect = true;
+                    service.CookieContainer = new System.Net.CookieContainer();
 
-                    btnConnect.Text = "Disconnect";
+                    //Connessione
+                    Passport passport = new Passport();
+                    passport.account = account;
+                    passport.email = email;
+                    passport.password = password;
+                    try
+                    {
+                        Status status = service.login(passport).status;
 
-                    //Abilito Comandi Programma
-                    EnableControls(this);
-                    btnStart.Enabled = false;
+                        //Connessione Riuscita Con Successo
+                        panelLogin.BackColor = Color.LightGreen;
+
+                        logged = true;
+
+                        lblStatusConnection.Text = "Connesso";
+
+                        btnConnect.Text = "Disconnect";
+
+                        //Abilito Comandi Programma
+                        EnableControls(this);
+                        btnStart.Enabled = false;
+                    }
+                    catch (SoapException ex)
+                    {
+                        panelLogin.BackColor = Color.Red;
+                        lblStatusConnection.Text = "Connessione non riuscita! " + ex.Message;
+                    }
                 }
-                catch (SoapException ex)
-                {
-                    panelLogin.BackColor = Color.Red;
-                    lblError.Text = "Errore Log In!";
-                    lblStatusConnection.Text = "Connessione non riuscita! " + ex.Message;
-                }
+                else
+                    MessageBox.Show("Seleziona l'Account !");
             }
             else
             {
@@ -189,6 +191,8 @@ namespace NetSuite_AutoCommander
                 c = new DefaultCommand(commandText);
                 //Inserimento Comando all'interno della Lista Comandi
                 listCommand.Add(c);
+
+                listBoxCommands.Items.Add(c.Commandtext);
             }
         }
 
@@ -223,6 +227,7 @@ namespace NetSuite_AutoCommander
                     c.Enabled = true;
                 }
             }
+
             statusBarConnection.Enabled = true;
         }
 
@@ -246,11 +251,15 @@ namespace NetSuite_AutoCommander
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i <  listCommand.Count; i++)
+            if (listBoxCommands.SelectedItem != null)
             {
                 //Scrittura Comando nel RichTextBox
-                listCommand[i].Execute(logger);
+                listCommand[listBoxCommands.SelectedIndex].Execute(logger);
             }
+            else
+                MessageBox.Show("Seleziona un Comando!");
+                
+            
         }
     }
 }
