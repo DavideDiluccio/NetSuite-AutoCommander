@@ -8,8 +8,6 @@ namespace NetSuite_Commands.Contracts
 {
     public interface ICommand
     {
-        string Type { get; }
-        string Commandtext { get; }
         void Execute(ILogger logger);
     }
 }

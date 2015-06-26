@@ -12,3 +12,6 @@ C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-DefaultI
 C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-DefaultImplementations\obj\Debug\NetSuite-DefaultImplementations.csprojResolveAssemblyReference.cache
 C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-DefaultImplementations\obj\Debug\NetSuite-DefaultImplementations.dll
 C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-DefaultImplementations\obj\Debug\NetSuite-DefaultImplementations.pdb
+C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-DefaultImplementations\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-DefaultImplementations\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-DefaultImplementations\bin\Debug\NetSuite-DefaultImplementations.dll.config

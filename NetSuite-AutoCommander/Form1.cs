@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using NSClientCRM.com.netsuite.webservices;
+using NetSuite_DefaultImplementations.com.netsuite.webservices;
 using System.Web.Services.Protocols;
 using Newtonsoft.Json.Linq;
 using NetSuite_Commands.Contracts;
 using NetSuite_DefaultImplementations;
+using Newtonsoft.Json;
+using NetSuite_DefaultImplementations.Commands;
 
 
 namespace NetSuite_AutoCommander
@@ -182,25 +184,22 @@ namespace NetSuite_AutoCommander
         private void leggiJSON(string filename)
         {
             listCommand = new List<ICommand>();
-            ICommand c;
-
             StreamReader r = new StreamReader(filename);
             string sampleJson = r.ReadToEnd();
             //Trasformo il JSON in un oggetto
-            JObject results = JObject.Parse(sampleJson);
-            //Per ogni comando trovato nel file mi salvo il nome
-            foreach (var result in results["cmd"])
+            JArray jCmds = (JArray)JsonConvert.DeserializeObject(sampleJson);
+        
+            foreach (var jCmd in jCmds)
             {
-                string commandText = (string)result["command"];
+                // this can be a string or array, how can we tell which it is
+                string cmdType = jCmd.Value<string>("type");
 
-                c = new DefaultCommand(commandText);
+                listCommand.Add(CommandFactory.Instance.CreateCommand(cmdType, jCmd["cfg"]));
 
-                MessageBox.Show(commandText);
-                //Inserimento Comando all'interno della Lista Comandi
-                listCommand.Add(c);
-
-                listBoxCommands.Items.Add(c.Commandtext);
-            }
+                //Inserimento Comando Nel listbox
+                listBoxCommands.Items.Add(cmdType);
+             }
+           
         }
 
         /// <summary>
@@ -261,7 +260,12 @@ namespace NetSuite_AutoCommander
             if (listBoxCommands.SelectedItem != null)
             {
                 //Scrittura Comando nel RichTextBox
-                listCommand[listBoxCommands.SelectedIndex].Execute(logger);
+                //listCommand[listBoxCommands.SelectedIndex].Execute(logger);
+
+                ItemPublishCommand cmd = (ItemPublishCommand)listCommand[listBoxCommands.SelectedIndex];
+                InventoryItem item = cmd.addItem();
+
+                WriteResponse response = service.update(item);
             }
             else
                 MessageBox.Show("Seleziona un Comando!");

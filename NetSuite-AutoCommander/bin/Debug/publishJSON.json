@@ -1,20 +1,16 @@
-{
-    "cmd": {
-        "command": [{
-            "type": "publish",
-            "args": {
-                "id": "1",
+[{
+            "type": "itemPublish",
+            "cfg": {
+                "id": "WEB00005",
                 "publish": "true",
-                "nome": "cipolle"
+                "name": "carote"
             }
         },
 		{
-		 "type": "publish",
-            "args": {
-                "id": "1",
+		 "type": "itemPublish",
+            "cfg": {
+                "id": "2",
                 "publish": "true",
-                "nome": "cipolle"
+                "name": "cipolle"
             }
 		}]
-    }
-}
