@@ -109,6 +109,11 @@ namespace NetSuite_AutoCommander
                     string email = txtEmail.Text;
                     string password = txtPassword.Text;
 
+                    MemoryExecutionContext ctx = new MemoryExecutionContext(logger);
+                    ctx.setSessionValue<NetSuiteService>("svcNS",service);
+                    NetSuiteService s = ctx.getSessionValue<NetSuiteService>("svcNS");
+
+
                     //Ricerca Url WebService
                     DataCenterAwareNetSuiteService DataCenter_Url = new DataCenterAwareNetSuiteService(account);
                     service.Url = DataCenter_Url.Url;
@@ -260,7 +265,7 @@ namespace NetSuite_AutoCommander
             if (listBoxCommands.SelectedItem != null)
             {
                 //Scrittura Comando nel RichTextBox
-                //listCommand[listBoxCommands.SelectedIndex].Execute(logger);
+                listCommand[listBoxCommands.SelectedIndex].Execute(logger);
 
                 ItemPublishCommand cmd = (ItemPublishCommand)listCommand[listBoxCommands.SelectedIndex];
                 InventoryItem item = cmd.addItem();
