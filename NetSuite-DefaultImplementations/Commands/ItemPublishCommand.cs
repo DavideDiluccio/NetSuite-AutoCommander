@@ -24,7 +24,22 @@ namespace NetSuite_DefaultImplementations.Commands
 
         public void Execute(ILogger logger)
         {
-            throw new NotImplementedException();
+            InventoryItem Item = new InventoryItem();
+
+            Item.itemId = cfg.ItemName;
+            Item.externalId = cfg.ItemID;
+
+            Item.isOnline = cfg.Publish;
+            Item.isOnlineSpecified = true;
+
+            MemoryExecutionContext ctx = new MemoryExecutionContext(logger);
+            NetSuite_DefaultImplementations.com.netsuite.webservices.NetSuiteService service = ctx.getSessionValue<NetSuite_DefaultImplementations.com.netsuite.webservices.NetSuiteService>("svcNS");
+
+            WriteResponse response = service.update(Item);
+            if (response.status.isSuccess == true)
+                logger.Log("Item updated Successfully");            
+            else
+                logger.Log(response.status.statusDetail[0].message.ToString());
         }
 
         public ItemPublishCommandConfiguration Cfg
@@ -32,17 +47,7 @@ namespace NetSuite_DefaultImplementations.Commands
             get { return cfg; }
         }
 
-        public InventoryItem addItem()
-        {
-            InventoryItem Item = new InventoryItem();
 
-            Item.itemId = cfg.ItemName;
-            Item.externalId = cfg.ItemID;
-            
-            Item.isOnline = cfg.Publish;
-            Item.isOnlineSpecified = true;
-            return Item;
-        }
         
     }
 

@@ -15,3 +15,6 @@ C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-DefaultI
 C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-DefaultImplementations\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-DefaultImplementations\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Daniele Genta\Documents\GitHub\NetSuite-AutoCommander\NetSuite-DefaultImplementations\bin\Debug\NetSuite-DefaultImplementations.dll.config
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-DefaultImplementations\bin\Debug\NetSuite-DefaultImplementations.dll.config
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-DefaultImplementations\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-DefaultImplementations\bin\Debug\Newtonsoft.Json.xml

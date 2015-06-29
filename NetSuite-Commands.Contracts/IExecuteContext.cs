@@ -11,5 +11,6 @@ namespace NetSuite_Commands.Contracts
         ILogger Logger{get;}
         void setSessionValue<T>(string key, T value);
         T getSessionValue<T>(string key);
+        void removeSessionValue(string key);
     }
 }

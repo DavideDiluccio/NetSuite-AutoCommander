@@ -1,0 +1,11 @@
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-DefaultImplementationsTests\bin\Debug\NetSuite-DefaultImplementationsTests.dll
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-DefaultImplementationsTests\bin\Debug\NetSuite-DefaultImplementationsTests.pdb
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-DefaultImplementationsTests\bin\Debug\NetSuite-Commands.Contracts.dll
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-DefaultImplementationsTests\bin\Debug\NetSuite-DefaultImplementations.dll
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-DefaultImplementationsTests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-DefaultImplementationsTests\bin\Debug\NetSuite-Commands.Contracts.pdb
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-DefaultImplementationsTests\bin\Debug\NetSuite-DefaultImplementations.pdb
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-DefaultImplementationsTests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-DefaultImplementationsTests\obj\Debug\NetSuite-DefaultImplementationsTests.csprojResolveAssemblyReference.cache
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-DefaultImplementationsTests\obj\Debug\NetSuite-DefaultImplementationsTests.dll
+C:\Users\Davide\Desktop\NetSuite-AutoCommander\NetSuite-DefaultImplementationsTests\obj\Debug\NetSuite-DefaultImplementationsTests.pdb

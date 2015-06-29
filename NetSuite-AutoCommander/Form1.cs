@@ -111,8 +111,7 @@ namespace NetSuite_AutoCommander
 
                     MemoryExecutionContext ctx = new MemoryExecutionContext(logger);
                     ctx.setSessionValue<NetSuiteService>("svcNS",service);
-                    NetSuiteService s = ctx.getSessionValue<NetSuiteService>("svcNS");
-
+                    
 
                     //Ricerca Url WebService
                     DataCenterAwareNetSuiteService DataCenter_Url = new DataCenterAwareNetSuiteService(account);
@@ -166,6 +165,8 @@ namespace NetSuite_AutoCommander
                 txtEmail.Text = "";
                 txtPassword.Text = "";
                 cmbAccount.SelectedItem = null;
+                listBoxCommands.Items.Clear();
+                rtbLogCommand.Clear();
             }
             
         }
@@ -267,10 +268,10 @@ namespace NetSuite_AutoCommander
                 //Scrittura Comando nel RichTextBox
                 listCommand[listBoxCommands.SelectedIndex].Execute(logger);
 
-                ItemPublishCommand cmd = (ItemPublishCommand)listCommand[listBoxCommands.SelectedIndex];
-                InventoryItem item = cmd.addItem();
+                //ItemPublishCommand cmd = (ItemPublishCommand)listCommand[listBoxCommands.SelectedIndex];
+                //InventoryItem item = cmd.addItem();
 
-                WriteResponse response = service.update(item);
+                //WriteResponse response = service.update(item);
             }
             else
                 MessageBox.Show("Seleziona un Comando!");

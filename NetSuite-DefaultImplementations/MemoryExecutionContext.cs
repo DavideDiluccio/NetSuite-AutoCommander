@@ -10,11 +10,12 @@ namespace NetSuite_DefaultImplementations
     public class MemoryExecutionContext : IExecuteContext
     {
         private ILogger logger;
-        private string key;
-        Type service;
+        private static Dictionary<string, object> bag = new Dictionary<string,object>();
+        
         public MemoryExecutionContext(ILogger logger)
         {
             this.logger = logger;
+            //bag = new Dictionary<string, object>();
         }
         public ILogger Logger
         {
@@ -23,16 +24,17 @@ namespace NetSuite_DefaultImplementations
 
         public void setSessionValue<T>(string key, T value)
         {
-            this.key = key;
-            service = typeof(value);
+            bag[key] = value;
         }
 
         public T getSessionValue<T>(string key)
         {
-            if (key == this.key)
-            {
-                return ;
-            }
+            return (T)bag[key];
+        }
+
+        public void removeSessionValue(string key)
+        {
+            bag.Remove(key);
         }
     }
 }
